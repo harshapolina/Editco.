@@ -16,7 +16,7 @@ const links = [
   {
     name: 'MediConnect',
     badge: 'People × Opportunities',
-    description: 'Connecting creators, professionals, and businesses through smart profiles.',
+    description: "MediConnect is an AI-based system that simplifies clinic queues and patient management.",
     href: 'https://mediconnect-editco.base44.app/'
   }
 ]
