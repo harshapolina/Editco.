@@ -1,0 +1,316 @@
+.service-card {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(800px) saturate(200%);
+  -webkit-backdrop-filter: blur(800px) saturate(200%);
+  border-radius: 36px;
+  padding: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  will-change: transform, opacity, filter;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  isolation: isolate;
+  contain: layout style paint;
+}
+
+/* Gradient backgrounds for different cards */
+.service-card[data-index="0"] {
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.85) 100%);
+}
+
+.service-card.intro-card[data-index="0"] {
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.85) 100%);
+}
+
+.service-card[data-index="1"] {
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.85) 100%);
+}
+
+.service-card[data-index="2"] {
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.85) 100%);
+}
+
+.service-card[data-index="3"] {
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.85) 100%);
+}
+
+.service-card[data-index="4"] {
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.85) 100%);
+}
+
+.service-card[data-index="5"] {
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.85) 100%);
+}
+
+.service-card[data-index="6"] {
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.85) 100%);
+}
+
+.service-card[data-index="7"] {
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.85) 100%);
+}
+
+.service-card[data-index="8"] {
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.85) 100%);
+}
+
+.service-card[data-index="9"] {
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.85) 100%);
+}
+
+.service-card[data-index="10"] {
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.85) 100%);
+}
+
+/* Intro card - same style as other cards */
+/* .service-card.intro-card {
+  /* Uses same blur as other cards */
+/* } */ */
+
+/* Scroll indicator */
+.scroll-indicator {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.scroll-text {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity;
+}
+
+.service-card-wrapper.active .service-card {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+              0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.service-card-wrapper.active .service-card::before {
+  opacity: 1;
+}
+
+.service-card-content {
+  color: #ffffff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.service-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-number {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 2px;
+  font-variant-numeric: tabular-nums;
+}
+
+.card-accent-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+}
+
+.service-card-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 2.5rem 0;
+  color: #FFD600;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  position: relative;
+}
+
+.service-card-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), transparent);
+  border-radius: 2px;
+}
+
+.service-card-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.description-line {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  position: relative;
+  padding-left: 0;
+}
+
+.description-bullet {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-footer-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 100%);
+}
+
+.card-footer-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.card-footer-text::after {
+  content: '→';
+  margin-left: 0.5rem;
+  opacity: 0.6;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+}
+
+.service-card:hover .card-footer-text::after {
+  transform: translateX(4px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-card {
+    padding: 2rem;
+    border-radius: 32px;
+    min-height: 350px;
+  }
+
+  .service-card-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .service-card-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .service-card-description {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .description-line {
+    font-size: 1rem;
+  }
+
+  .description-bullet {
+    font-size: 1.25rem;
+  }
+
+  .card-footer {
+    padding-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    padding: 1.75rem;
+    border-radius: 28px;
+    min-height: 300px;
+  }
+
+  .service-card-header {
+    margin-bottom: 1rem;
+  }
+
+  .card-number {
+    font-size: 0.75rem;
+  }
+
+  .service-card-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-card-description {
+    gap: 0.875rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .description-line {
+    font-size: 0.95rem;
+  }
+
+  .description-bullet {
+    font-size: 1.125rem;
+  }
+
+  .card-footer {
+    padding-top: 1.25rem;
+  }
+}
