@@ -188,14 +188,20 @@ npm install
 ```
 
 2. **Configure Database**
-   - Update MongoDB connection string in `backend/src/config/db.js`
-   - Current connection: MongoDB Atlas cluster
+   - Create a `.env` file in the `backend` directory
+   - Copy the following template and fill in your values:
+   ```
+   MONGO_URI=your_mongodb_connection_string_here
+   JWT_SECRET=your-secret-key-here
+   PORT=5000
+   ```
+   - **IMPORTANT:** Never commit the `.env` file to git. It's already in `.gitignore`
+   - Get your MongoDB URI from MongoDB Atlas dashboard
 
-3. **Environment Variables** (Optional)
-   - Create `.env` file in backend root (optional, defaults are set)
-   - `JWT_SECRET` - Secret key for JWT tokens (defaults to 'MyToken')
-   - `PORT` - Server port (defaults to 5000)
-   - `MONGO_URI` - MongoDB connection string (hardcoded in db.js)
+3. **Environment Variables** (Required)
+   - `MONGO_URI` - MongoDB connection string (required)
+   - `JWT_SECRET` - Secret key for JWT tokens (required)
+   - `PORT` - Server port (optional, defaults to 5000)
 
 4. **Start Server**
 ```bash
