@@ -61,7 +61,17 @@ function OurTeamSection() {
           <p className="team-description">
           At Editco, we are a small but focused team of designers, developers, and creators who love building things that work. We believe in clear ideas, clean execution, and real results. Every project we take on is handled with care, speed, and attention to detail, making sure our clients get work that actually helps their business grow.
           </p>
-          <button className="team-join-btn">Meet Team</button>
+          <button 
+            className="team-join-btn"
+            onClick={() => {
+              const loginSection = document.getElementById('login')
+              if (loginSection) {
+                loginSection.scrollIntoView({ behavior: 'smooth' })
+              }
+            }}
+          >
+            Meet Team
+          </button>
         </div>
 
         {/* Right Side - Team Cards */}

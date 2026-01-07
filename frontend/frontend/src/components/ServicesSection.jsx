@@ -6,7 +6,7 @@ const services = [
   {
     id: 0,
     title: 'What We Ship',
-    description: 'Built to work. Built to scale.\nWeb, AI, and creative — done right.',
+    description: '',
     isIntro: true
   },
   {

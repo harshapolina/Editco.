@@ -14,14 +14,16 @@ function ServiceCard({ title, description, index, isIntro }) {
           </div>
         )}
         <h2 className="service-card-title">{title}</h2>
-        <div className="service-card-description">
-          {descriptionLines.map((line, idx) => (
-            <p key={idx} className="description-line">
-              <span className="description-bullet">•</span>
-              {line}
-            </p>
-          ))}
-        </div>
+        {descriptionLines.length > 0 && (
+          <div className="service-card-description">
+            {descriptionLines.map((line, idx) => (
+              <p key={idx} className="description-line">
+                <span className="description-bullet">•</span>
+                {line}
+              </p>
+            ))}
+          </div>
+        )}
         {isIntro && (
           <div className="scroll-indicator">
             <span className="scroll-text">Keep scrolling</span>

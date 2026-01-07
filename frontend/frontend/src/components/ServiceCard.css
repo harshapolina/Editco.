@@ -70,14 +70,15 @@
   background: linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.85) 100%);
 }
 
-/* Intro card - same style as other cards */
-/* .service-card.intro-card {
-  /* Uses same blur as other cards */
-/* } */ */
+/* Intro card - increased blur */
+.service-card.intro-card {
+  backdrop-filter: blur(1200px) saturate(200%);
+  -webkit-backdrop-filter: blur(1200px) saturate(200%);
+}
 
 /* Scroll indicator */
 .scroll-indicator {
-  margin-top: 3rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,6 +138,12 @@
   z-index: 1;
 }
 
+.service-card.intro-card .service-card-content {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
 .service-card-header {
   display: flex;
   align-items: center;
@@ -166,6 +173,18 @@
   letter-spacing: -1.5px;
   line-height: 1.1;
   position: relative;
+}
+
+/* Enhanced styling for intro card title */
+.service-card.intro-card .service-card-title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #FFD600;
+  letter-spacing: -2px;
+  position: relative;
+  margin: 0;
+  text-align: center;
+  width: 100%;
 }
 
 .service-card-title::after {
@@ -259,6 +278,12 @@
     margin-bottom: 2rem;
   }
 
+  .service-card.intro-card .service-card-title {
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
   .service-card-description {
     gap: 1rem;
     margin-bottom: 1.5rem;
@@ -295,6 +320,12 @@
   .service-card-title {
     font-size: 1.75rem;
     margin-bottom: 1.5rem;
+  }
+
+  .service-card.intro-card .service-card-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
   }
 
   .service-card-description {

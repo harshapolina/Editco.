@@ -38,7 +38,6 @@ function Hero() {
         }}
       />
       <div className="hero-nav">
-        <div className="hero-logo">LoopAudit</div>
         <nav className="hero-nav-links">
           <a href="#home">Home</a>
           <a href="#features">Features</a>
