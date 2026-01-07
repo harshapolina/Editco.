@@ -37,7 +37,7 @@ function Hero() {
           '--mouse-y': `${mousePosition.y}px`
         }}
       />
-      <div className="hero-nav">
+      {/* <div className="hero-nav">
         <nav className="hero-nav-links">
           <a href="#home">Home</a>
           <a href="#features">Features</a>
@@ -46,7 +46,7 @@ function Hero() {
           <a href="#docs">Docs</a>
         </nav>
         <button className="hero-join-btn">Join Now</button>
-      </div>
+      </div> */}
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-heading">

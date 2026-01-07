@@ -82,7 +82,63 @@ const projects = [
     cloudinaryImage: 'https://res.cloudinary.com/dzn5zamaf/image/upload/v1759317012/Screenshot_2025-10-01_163952_p5pdrs.png',
     deployedLink: 'https://hvsmovies.niat.tech/',
     gallery: []
+  },
+    {
+    id: 9,
+    name: 'Cafe Website',
+    category: 'Web Development',
+    type: 'websites',
+    cloudinaryImage: 'https://res.cloudinary.com/dqataciy5/image/upload/v1760611085/Screenshot_2025-10-16_at_4.07.55_PM_ozqjp5.png',
+    deployedLink: 'https://ukusa-cafe-y3wb.vercel.app/',
+    gallery: []
+  },
+    {
+    id: 10,
+    name: 'McDonalds App Interface',
+    category: 'UI/UX Design',
+    type: 'other',
+    cloudinaryImage: 'https://res.cloudinary.com/dqataciy5/image/upload/v1760611478/Screenshot_2025-10-16_at_4.14.20_PM_dvrcm1.png',
+    deployedLink: 'https://www.figma.com/design/Jj2wI6mCgjNC0bwDziRWb0/deepika-p1?node-id=0-1&p=f&t=RvjVmMlhT7xdDrG3-0',
+    gallery: []
+  },
+    {
+    id: 11,
+    name: 'Resuma Genius',
+    category: 'Web Development',
+    type: 'websites',
+    cloudinaryImage: 'https://res.cloudinary.com/dqataciy5/image/upload/v1759681045/Screenshot_2025-10-05_at_9.47.18_PM_goidyl.png',
+    deployedLink: 'https://resuma-genius.vercel.app/',
+    gallery: []
+  },
+  {
+    id: 12,
+    name: 'Indian Kitchen',
+    category: 'Web Development',
+    type: 'websites',
+    cloudinaryImage: 'https://res.cloudinary.com/dqataciy5/image/upload/v1759495957/Screenshot_2025-10-03_at_6.22.30_PM_khb1e1.png',
+    deployedLink: 'https://indian-kitchen.vercel.app/',
+    gallery: []
+  },
+    {
+    id: 13,
+    name: 'Job Link',
+    category: 'Web Development',
+    type: 'websites',
+    cloudinaryImage: 'https://res.cloudinary.com/dqataciy5/image/upload/v1759495845/Screenshot_2025-10-03_at_6.20.38_PM_r1xt5o.png',
+    deployedLink: 'https://job-web-application-boc9.vercel.app/',
+    gallery: []
+  },
+      {
+    id: 14,
+    name: 'Viratkoomar',
+    category: 'Web Development',
+    type: 'websites',
+    cloudinaryImage: 'https://res.cloudinary.com/dzn5zamaf/image/upload/v1767769908/Screenshot_2026-01-07_124103_s3rghm.png',
+    deployedLink: 'viratkoomar.in',
+    gallery: []
   }
+
+
 ]
 
 function WorksSection() {
@@ -106,7 +162,8 @@ function WorksSection() {
     if (filter === 'all') return allProjects
     if (filter === 'ai automations') return allProjects.filter((p) => p.type === 'automations')
     if (filter === 'websites') return allProjects.filter((p) => p.type === 'websites')
-    return allProjects.filter((p) => p.type !== 'automations' && p.type !== 'websites')
+    if (filter === 'UI/UX') return allProjects.filter((p) => p.type === 'other')
+    return allProjects
   }, [allProjects, filter])
 
   const handleCardClick = (project) => {
@@ -258,7 +315,7 @@ function WorksSection() {
               <div className="all-projects-header">
                 <h3>All Projects</h3>
                 <div className="all-projects-filters">
-                  {['all', 'ai automations', 'websites', 'other'].map((f) => (
+                  {['all', 'ai automations', 'websites', 'UI/UX'].map((f) => (
                     <button
                       key={f}
                       className={`filter-pill ${filter === f ? 'active' : ''}`}

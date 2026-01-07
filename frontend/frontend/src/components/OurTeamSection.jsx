@@ -12,7 +12,7 @@ const members = [
   },
   {
     id: 2,
-    name: 'Deepika Mundla',
+    name: 'Deepika MundLa',
     role: 'Co-founder',
     image: 'https://res.cloudinary.com/dqataciy5/image/upload/v1759729626/deepika_JPG_ylslw4.jpg',
     linkedin: 'https://www.linkedin.com/in/deepika-mundla/'

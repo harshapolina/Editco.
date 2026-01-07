@@ -153,8 +153,8 @@
 
 .card-number {
   font-size: 0.875rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
   letter-spacing: 2px;
   font-variant-numeric: tabular-nums;
 }
