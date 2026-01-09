@@ -136,6 +136,15 @@ const projects = [
     cloudinaryImage: 'https://res.cloudinary.com/dzn5zamaf/image/upload/v1767769908/Screenshot_2026-01-07_124103_s3rghm.png',
     deployedLink: 'viratkoomar.in',
     gallery: []
+  },
+  {
+    id: 15,
+    name: 'Areaaa',
+    category: 'UI/UX Design',
+    type: 'other',
+    cloudinaryImage: 'https://res.cloudinary.com/dzn5zamaf/image/upload/v1767774255/Screenshot_2026-01-07_135348_tlxy0c.png',
+    deployedLink: 'https://areaaa.webflow.io/',
+    gallery: []
   }
 
 
