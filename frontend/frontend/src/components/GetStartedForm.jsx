@@ -52,21 +52,32 @@ function GetStartedForm() {
     setIsSubmitting(true)
 
     try {
-      // TODO: Add n8n webhook URL here
+      // Save to database
+      const response = await fetch('http://localhost:5000/api/auth/project-submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.message || 'Failed to submit project')
+      }
+
+      // TODO: Add n8n webhook URL here (optional)
       // const n8nWebhookUrl = 'YOUR_N8N_WEBHOOK_URL'
       // await fetch(n8nWebhookUrl, {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify(formData)
       // })
-
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
       
       setIsSubmitted(true)
     } catch (error) {
       console.error('Error submitting form:', error)
-      alert('Something went wrong. Please try again.')
+      alert(error.message || 'Something went wrong. Please try again.')
     } finally {
       setIsSubmitting(false)
     }
