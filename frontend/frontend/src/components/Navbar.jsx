@@ -7,17 +7,8 @@ function Navbar() {
     const handleSmoothScroll = (e) => {
       const href = e.target.getAttribute('href')
       if (href && href.startsWith('#')) {
-        const targetId = href.substring(1)
-        
-        // Special handling for admin and get-started (hash-based routing)
-        if (targetId === 'admin' || targetId === 'get-started') {
-          e.preventDefault()
-          // Set hash for routing
-          window.location.hash = targetId
-          return
-        }
-        
         e.preventDefault()
+        const targetId = href.substring(1)
         const targetElement = document.getElementById(targetId)
         
         if (targetElement) {
@@ -60,7 +51,6 @@ function Navbar() {
           <a href="#why-editco" className="nav-link">Why Editco</a>
           <a href="#learn" className="nav-link">Works</a>
           <a href="#login" className="nav-link">Login</a>
-          <a href="#admin" className="nav-link admin-link">Admin</a>
         </div>
         
         <button className="navbar-cta" onClick={handleGetStarted}>Get Started</button>
