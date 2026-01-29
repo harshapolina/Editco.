@@ -41,8 +41,8 @@ function WhyThisCohort({ isInView }) {
       <h2 className="cohort-heading">WHY Editco?</h2>
 
       <div className="flow-diagram">
-        <svg 
-          viewBox="0 0 800 220" 
+        <svg
+          viewBox="0 0 800 220"
           className="flow-svg"
           preserveAspectRatio="xMidYMid meet"
         >
@@ -54,12 +54,12 @@ function WhyThisCohort({ isInView }) {
               <stop offset="60%" stopColor="hsl(64 100% 50% / 0)" />
               <stop offset="100%" stopColor="hsl(64 100% 50% / 0)" />
             </linearGradient>
-            
+
             <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+              <feGaussianBlur stdDeviation="6" result="coloredBlur" />
               <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
 
@@ -107,7 +107,7 @@ function WhyThisCohort({ isInView }) {
             strokeWidth="1.5"
             opacity="0.6"
           />
-          
+
           <path
             d="M 490 35 A 220 80 0 0 1 645 110 L 740 110"
             fill="none"
@@ -115,7 +115,7 @@ function WhyThisCohort({ isInView }) {
             strokeWidth="1.5"
             opacity="0.6"
           />
-          
+
           <path
             d="M 60 110 L 310 110"
             fill="none"
@@ -123,7 +123,7 @@ function WhyThisCohort({ isInView }) {
             strokeWidth="1.5"
             opacity="0.6"
           />
-          
+
           <path
             d="M 490 110 L 740 110"
             fill="none"
@@ -131,7 +131,7 @@ function WhyThisCohort({ isInView }) {
             strokeWidth="1.5"
             opacity="0.6"
           />
-          
+
           <path
             d="M 60 110 L 155 110 A 220 80 0 0 0 310 185"
             fill="none"
@@ -139,7 +139,7 @@ function WhyThisCohort({ isInView }) {
             strokeWidth="1.5"
             opacity="0.6"
           />
-          
+
           <path
             d="M 490 185 A 220 80 0 0 0 645 110 L 740 110"
             fill="none"
@@ -156,7 +156,7 @@ function WhyThisCohort({ isInView }) {
             filter="url(#glow)"
             opacity="0.9"
           />
-          
+
           <path
             d="M 60 110 L 740 110"
             fill="none"
@@ -165,7 +165,7 @@ function WhyThisCohort({ isInView }) {
             filter="url(#glow)"
             opacity="0.9"
           />
-          
+
           <path
             d="M 60 110 L 155 110 A 220 80 0 0 0 645 110 L 740 110"
             fill="none"
@@ -254,7 +254,7 @@ function OurImpact({ isInView }) {
       let current = 0
       const duration = 2000
       const increment = target / (duration / 16)
-      
+
       const timer = setInterval(() => {
         current += increment
         if (current >= target) {
@@ -288,26 +288,26 @@ function OurImpact({ isInView }) {
   }, [isInView])
 
   const impacts = [
-    { 
-      number: 10, 
-      suffix: '+', 
-      title: 'Projects Shipped', 
+    {
+      number: 10,
+      suffix: '+',
+      title: 'Projects Shipped',
       description: 'We get the brief, ask the right questions, and lock the direction before touching the keyboard.',
       icon: RocketIcon,
       align: 'right'
     },
-    { 
-      number: 5, 
-      suffix: '+', 
-      title: 'Happy Clients', 
+    {
+      number: 5,
+      suffix: '+',
+      title: 'Happy Clients',
       description: 'No copy-paste work. Every project is custom, on-brand, and built to solve real problems.',
       icon: UsersIcon,
       align: 'left'
     },
-    { 
-      number: 2, 
-      suffix: '+', 
-      title: 'Years in the Game', 
+    {
+      number: 2,
+      suffix: '+',
+      title: 'Years in the Game',
       description: 'This is where we cook. Websites, automations, AI, creatives — built fast, built right.',
       icon: ClockIcon,
       align: 'right'
@@ -330,7 +330,7 @@ function OurImpact({ isInView }) {
         {impacts.map((impact, index) => {
           const IconComponent = impact.icon
           return (
-            <div 
+            <div
               key={index}
               className={`impact-card-new-wrapper impact-align-${impact.align}`}
             >
@@ -340,7 +340,7 @@ function OurImpact({ isInView }) {
                 </div>
 
                 <h4 className="impact-card-title">
-                  <span 
+                  <span
                     ref={(el) => (counterRefs.current[index] = el)}
                     data-target={impact.number}
                     className="impact-number-new"
