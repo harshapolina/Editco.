@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import './ServicesSection.css'
 import ServiceCard from './ServiceCard'
 
+
 const services = [
   {
     id: 0,

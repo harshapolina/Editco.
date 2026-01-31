@@ -208,7 +208,7 @@ function WorksSection() {
               )}
             </div>
           </div>
-
+          
           {/* Middle row - 2 smaller images */}
           <div className="work-card" onClick={() => handleCardClick(displayedProjects[1])}>
             <div className="work-card-image">

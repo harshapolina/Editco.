@@ -38,3 +38,5 @@ function TeamCard({ member, isMain, isInView, delay }) {
 
 export default TeamCard
 
+
+
