@@ -101,7 +101,7 @@ const projects = [
     deployedLink: 'https://www.figma.com/design/Jj2wI6mCgjNC0bwDziRWb0/deepika-p1?node-id=0-1&p=f&t=RvjVmMlhT7xdDrG3-0',
     gallery: []
   },
-    {
+  {
     id: 11,
     name: 'Resuma Genius',
     category: 'Web Development',
