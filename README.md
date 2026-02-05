@@ -1,6 +1,6 @@
 # Editco.Media - Website Documentation
 
-## 🎯 Project Overview
+##  Project Overview
 
 Editco.Media is a modern, premium website showcasing the agency's services, portfolio, team, and client engagement capabilities. Built with React and Node.js, the website features smooth animations, glassmorphism effects, and a clean, professional design.
 
@@ -8,7 +8,7 @@ Editco.Media is a modern, premium website showcasing the agency's services, port
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 - **React 19.2.0** - Modern UI library
@@ -27,7 +27,7 @@ Editco.Media is a modern, premium website showcasing the agency's services, port
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 editcomedia/
@@ -71,7 +71,7 @@ editcomedia/
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 ### 1. **Hero Section**
 - Animated grid background with cursor-following glow effect
@@ -141,7 +141,7 @@ editcomedia/
 
 ---
 
-## 🎨 Design System
+##  Design System
 
 ### Color Palette
 - **Primary Black:** `#000000`
@@ -162,7 +162,7 @@ editcomedia/
 
 ---
 
-## 🚀 Setup Instructions
+##  Setup Instructions
 
 ### Prerequisites
 - Node.js (v18 or higher)
@@ -212,7 +212,7 @@ The backend will run on `http://localhost:5000`
 
 ---
 
-## 📝 Component Details
+##  Component Details
 
 ### Navbar Component
 - Fixed navigation bar
@@ -266,7 +266,7 @@ The backend will run on `http://localhost:5000`
 
 ---
 
-## 🔐 Backend Architecture
+##  Backend Architecture
 
 ### MVC Pattern
 - **Models:** User schema definition (`User.js`)
@@ -304,11 +304,9 @@ The backend will run on `http://localhost:5000`
   age: Number (required)
   timestamps: true
 }
-```
 
----
 
-## 🎯 Key Implementation Details
+##  Key Implementation Details
 
 ### Scroll Locking (Services Section)
 - Custom wheel event handler
@@ -334,9 +332,8 @@ The backend will run on `http://localhost:5000`
 - Conditional rendering based on hash
 - Smooth scroll to sections
 
----
 
-## 📱 Responsive Design
+##  Responsive Design
 
 - Mobile-first approach
 - Breakpoints:
@@ -346,9 +343,9 @@ The backend will run on `http://localhost:5000`
 - Flexible layouts with CSS Grid and Flexbox
 - Touch-friendly interactions
 
----
 
-## 🔄 Future Enhancements
+
+##  Future Enhancements
 
 ### Planned Features
 1. **n8n Integration:** Connect Get Started form to n8n automation workflow
@@ -359,9 +356,9 @@ The backend will run on `http://localhost:5000`
 6. **Performance:** Image optimization, lazy loading
 7. **Accessibility:** ARIA labels, keyboard navigation improvements
 
----
 
-## 🐛 Known Issues & Solutions
+
+## Known Issues & Solutions
 
 ### Select Dropdown Styling
 - Browser default styling limitations for `<select>` options
@@ -372,31 +369,28 @@ The backend will run on `http://localhost:5000`
 - Smooth transitions at section boundaries
 - Handled with threshold checks in wheel event handler
 
----
 
-## 📄 License
+##  License
 
 This project is proprietary software for Editco.Media.
 
----
 
-## 👥 Team
+##  Team
 
 - **Tej Balam** - Co-founder
 - **Deepika Mundla** - Co-founder  
 - **Harsha Polina** - Co-founder
 
----
 
-## 📞 Contact
 
-- **Email:** hello@editco.media
-- **LinkedIn:** [Editco.Media](https://www.linkedin.com/company/editcomedia)
-- **Instagram:** [@editco.media](https://www.instagram.com/editco.media/)
+##  Contact
 
----
+// - **Email:** hello@editco.media
+// - **LinkedIn:** [Editco.Media](https://www.linkedin.com/company/editcomedia)
+// - **Instagram:** [@editco.media](https://www.instagram.com/editco.media/)
 
-## 🏗️ Development Timeline
+
+##  Development Timeline
 
 - **Initial Setup:** React + Vite project structure
 - **Design Implementation:** Dark theme with glassmorphism
@@ -406,9 +400,8 @@ This project is proprietary software for Editco.Media.
 - **Form Implementation:** Get Started form with validation
 - **Polish & Optimization:** Code cleanup, unused file removal
 
----
 
-## 📚 Technologies Used in Detail
+##  Technologies Used in Detail
 
 ### Frontend Libraries
 - **React:** Component-based UI development
@@ -431,7 +424,7 @@ This project is proprietary software for Editco.Media.
 
 ---
 
-## 🎨 Design Philosophy
+##  Design Philosophy
 
 Editco.Media website follows these design principles:
 
